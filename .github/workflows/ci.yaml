@@ -21,7 +21,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: BUILD DOCKER IMAGE
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}projet:v2 .
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/projet:v2 .
 
       - name: PUSH TO DOCKER HUB
         run: docker push ${{ secrets.DOCKER_USERNAME }}/projet:v2
